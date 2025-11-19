@@ -1,0 +1,181 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+.store-header {
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+  background: url('friends_img.jpg') center/cover no-repeat;
+  animation: fadeIn 1s ease-in-out;
+  width: 1538px;
+  height: 500px;
+}
+
+.promo-banner {
+  background-color: rgba(255, 0, 0, 0.45);
+  text-align: center;
+  padding: 0.6rem;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+.promo-banner a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ffcc00;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-actions input {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: none;
+  font-size: 0.9rem;
+  transition: box-shadow 0.3s ease;
+}
+
+.nav-actions input:focus {
+  outline: none;
+  box-shadow: 0 0 5px #ff6600;
+}
+
+.cart {
+  background-color: #fff;
+  color: #000;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cart:hover {
+  background-color: #ffcc00;
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-actions {
+    flex-direction: column;
+  }
+}
+.electronics-section {
+  padding: 4rem 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.electronics-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.product-grid,
+.brand-grid,
+.promo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.product-card,
+.promo-card {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: zoomIn 0.8s ease;
+}
+
+.product-card:hover,
+.promo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.brand-grid div {
+  background-color: #e6f2ff;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .electronics-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .product-card,
+  .promo-card {
+    font-size: 0.95rem;
+  }
+}
